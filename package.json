@@ -17,6 +17,6 @@
     "node": ">=22"
   },
   "dependencies": {
-    "@red-cup-engineering/path-walking-service": "1.0.0"
+    "@red-cup-engineering/path-walking-service": "workspace:*"
   }
 }
