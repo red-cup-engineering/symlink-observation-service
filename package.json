@@ -6,8 +6,7 @@
   "description": "Stats every symlink a walk finds, following rather than lstat-ing its target, and reports the ones that resolve to nothing. Use to catch dangling symlinks before they break a package's tests silently, the way two of them did.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/red-cup-engineering/computer-file-engineering-services-section.git",
-    "directory": "services/file-observation-services-section/services/symlink-observation-service"
+    "url": "git+https://github.com/red-cup-engineering/symlink-observation-service.git"
   },
   "exports": "./src/observe-dangling-symlinks.mjs",
   "bin": {
