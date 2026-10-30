@@ -1,0 +1,22 @@
+{
+  "name": "@red-cup-engineering/symlink-observation-service",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Stats every symlink a walk finds, following rather than lstat-ing its target, and reports the ones that resolve to nothing. Use to catch dangling symlinks before they break a package's tests silently, the way two of them did.",
+  "exports": "./src/observe-dangling-symlinks.mjs",
+  "bin": {
+    "observe-dangling-symlinks": "./scripts/observe-dangling-symlinks.mjs"
+  },
+  "scripts": {
+    "check": "node --check src/observe-dangling-symlinks.mjs && node --check scripts/observe-dangling-symlinks.mjs",
+    "test": "node --test test/*.test.mjs",
+    "verify": "npm run check && npm test"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@red-cup-engineering/path-walking-service": "1.0.0"
+  }
+}
