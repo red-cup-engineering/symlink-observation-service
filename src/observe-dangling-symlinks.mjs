@@ -1,12 +1,12 @@
 import { readlink, stat } from "node:fs/promises";
 import { resolve } from "node:path";
 
-import { walkPosixPaths } from "@red-cup-engineering/path-walking-service";
+import { walkPosixPaths } from "@red-cup-engineering/computer-file-engine/walk-posix-paths";
 
 const OBSERVATION_TYPE = "DanglingSymlinkObservation";
 
 // A PosixPathWalk records a symlink as its own path/kind entry but never
-// stats or follows its target (see path-walking-service's walkPosixPaths):
+// stats or follows its target (see computer-file-engine's walkPosixPaths):
 // the walk is a listing, not a resolution. Whether a symlink's target
 // resolves is exactly what this service adds on top, at report time: for
 // every symlink entry the walk finds, follow-stat the target and report the

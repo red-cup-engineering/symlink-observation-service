@@ -100,6 +100,6 @@ test("CLI: default excludes are .git only, node_modules is walked, output is NDJ
   }
 });
 
-test("root is required, propagated from path-walking-service", async () => {
+test("root is required, propagated from computer-file-engine", async () => {
   await assert.rejects(() => observeDanglingSymlinks({}), TypeError);
 });
