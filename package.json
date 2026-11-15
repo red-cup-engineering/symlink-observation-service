@@ -21,7 +21,7 @@
     "node": ">=22"
   },
   "dependencies": {
-    "@red-cup-engineering/computer-file-engine": "0.1.0"
+    "@red-cup-engineering/computer-file-engine": "^0.1.0"
   },
   "license": "MIT",
   "funding": {
